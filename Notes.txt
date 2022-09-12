@@ -1,0 +1,120 @@
+https://micro-frontends.org/
+
+https://martinfowler.com/articles/micro-frontends.html
+
+<!--#include virtual="/footer.html" -->
+
+
+server side includes supported by Apache and Microsoft IIS web servers
+
+
+One of the most frequently asked questions about micro frontends is how to make them communicate with each other. It is generally recommended that the micro frontends communicate as little as possible as this introduces an unwanted link that we are trying to avoid in the first place. That said, a certain amount of communication between micro frontends is often required. Custom events allow micro frontends to communicate indirectly. Events can be created with the 'Event constructor' as follows: New Event('build') (see figure 14).
+
+For example, the dispatchEvent can be initiated in micro frontend X to dispatch an event called: 'build'. Micro frontend Y then listens for this event (using the addEventListener method) and handles further processing.
+
+
+cosnt event=new Event('build);
+//lsiten
+elem1.addEventListener('build',function(e){},false)
+//dispatch
+elem2.dispatchEvent(event);
+
+
+https://dzone.com/articles/micro-frontends-by-example-8#:~:text=Server-Side%20Integration%20SSI%20is%20rendering%20HTML%20on%20the,a%20fragment%20of%20HTML%20files%20%28see%20Figure%207%29.
+
+
+https://askleo.com/how_do_i_include_one_html_file_inside_another/
+
+	With all of the above approaches, the browser viewing the page knows
+absolutely nothing about the include – it all happened before the page
+was downloaded. 
+
+“Welcome to ‘include’ files – an incredibly powerful facility that can do this, and so much more, on your web site.”
+You can see it’s “printing” the HTML you want included. In other
+words, if you can format your include file as a series of javascript
+prints, you can use client-side include to insert it.
+
+https://blog.bitsrc.io/microfrontend-pattern-comparison-c50a9d2e4172
+
+https://blog.bitsrc.io/microfrontend-pattern-comparison-c50a9d2e4172
+
+https://www.semrush.com/blog/on-page-seo-basics-meta-descriptions/?kw=core_bu_338&cmp=ROW_SRCH_DSA_Blog_Core_BU_BING&label=dsa_pagefeed&Network=o&Device=c&utm_content=&kwid=dat-2333782149579743:loc-90&cmpid=412653544&agpid=1311717705065327&BU=Core&extid=&adpos=&msclkid=4c0bdaab0e4818d2c9d8b9b6bb40a7a2&utm_source=bing&utm_medium=cpc&utm_campaign=ROW_SRCH_DSA_Blog_Core_BU_BING&utm_term=core_bu_338
+
+https://www.xenonstack.com/insights/micro-frontend-architecture
+
+
+What is React and how does it affect your SEO?
+React is a Javascript-framework (even though some people would rather call it a a library) that can be used for building the user interface of a site. It makes it simple to build interactive websites and apps that feel fast. React enables you to for example achieve that “app feeling” of navigating between pages without a reload which increases the user experience.
+
+React gives you a SPA (Single Page Application) which requires Javascript to show the content on the page. The problem is that the Google crawl bot, that scans all the pages on the internet, isn’t as good as understanding a page with javascript compared with a page that consists of regular HTML-code.
+
+https://proxify.io/articles/react-seo#what-is-react-and-how-does-it-affect-your-seo
+
+https://www.freecodecamp.org/news/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e/#:~:text=In%20Client-side%20rendering%2C%20your%20browser%20downloads%20a%20minimal,on%20the%20server.%20The%20output%20is%20HTML%20content.
+
+https://www.freecodecamp.org/news/server-side-rendering-your-react-app-in-three-simple-steps-7a82b95db82e/#:~:text=In%20Client-side%20rendering%2C%20your%20browser%20downloads%20a%20minimal,on%20the%20server.%20The%20output%20is%20HTML%20content.
+
+https://blog.bitsrc.io/microfrontend-pattern-comparison-c50a9d2e4172
+
+https://webpack.js.org/concepts/module-federation/
+
+There is little to no dependency duplication. Through the shared option — remotes will depend on host dependencies, if the host does not have a dependency, the remote will download its own. No code duplication, but built-in redundancy
+
+https://github.com/module-federation/module-federation-examples
+
+https://medium.com/swlh/webpack-5-module-federation-a-game-changer-to-javascript-architecture-bcdd30e02669
+
+https://dev.to/bitovi/how-to-build-a-micro-frontend-with-webpacks-module-federation-plugin-n41
+
+
+The above configuration shows an object of remotes, where the key is the name of the exposed container ShellModuleand the value is the URL where the container will be loaded from. The property name is used as the request scope ShellModule@[appUrl].filename.js.
+
+
+
+shared config from remotes indicate cotnainer load only one copy of any module 
+
+import as a function does async laoding
+in index.js 
+import('./bootstrap')
+bootstrap contains actual code
+
+
+shared module depends upon caret etc that says minro and patch diff is ok. in that case contaienr laods only if major version changed both modules with diff version
+
+other wise
+
+if singleton turt for faker and version 4 and 5 then 4 version aspp says i do not want 5 
+warning
+remoterneyt.js has get adn init functions
+
+
+ensure module name should not conflcit with any html ids
+
+css in js lib generates unique calsname
+
+
+<h1 class='h1_j1k28te>
+example .h1{ color:green} generated as h1_j1k28te{
+
+auth root div calls name
+
+.auth h1 {
+}
+color:green
+}
+
+
+css you are writing for your projects
+coming from copoent or css lurbary(bootstrap mwfria)
+
+
+Lazy loading is a design pattern for optimizing web and mobile apps. The concept of lazy loading is simple: initialize objects that are critical to the user interface first and quietly render noncritical items later.
+https://blog.logrocket.com/lazy-loading-components-in-react-16-6-6cea535c0b52/
+
+https://webpack.js.org/guides/code-splitting/ **
+entrypoints based
+
+https://webpack.js.org/guides/code-splitting/
+
+
+
