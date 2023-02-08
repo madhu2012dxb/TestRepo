@@ -1,0 +1,263 @@
+https://medium.com/@chungadipraful/package-json-vs-package-lock-json-4a9d16c2283
+caret (^) :The carrot sign only increment in minor and revision.For example (².4.5),the carrot sign will get higher minor / revision
+tilde (~): The tilde sign will get higher revisions 
+Caret Ranges ^1.2.3 ^0.2.5 ^0.0.4
+Allows changes that do not modify the left-most non-zero digit in the [major, minor, patch] tuple. In other words, this allows patch and minor updates for versions 1.0.0 and above, patch updates for versions 0.X >=0.1.0, and no updates for versions 0.0.X.
+
+Tilde Ranges ~1.2.3 ~1.2 ~1
+Allows patch-level changes if a minor version is specified on the comparator. Allows minor-level changes if not.
+
+Without package.lock.json, there might be some differences in installed versions in different environments. To overcome this problem, package.lock.json is created to have the same results in every environment. It should be in source control with the package.json file because if any other user will clone the project and install dependencies then it will install the exact same dependencies as in package.lock.json to avoid differences.
+
+Below are the main differences between the two,
+
+It allows future devs to install the same dependencies in the project
+
+
+In this tutorial we will take a look at webpack, a powerful open-source bundler and preprocessor that can handle a huge variety of different tasks.
+
+https://tutorialzine.com/2017/04/learn-webpack-in-15-minutes#:~:text=Learn%20Webpack%20in%2015%20Minutes%201%201.%20Installation,4.%20Requiring%20Libraries%20...%205%205.%20Loaders%20
+
+
+
+https://github.com/bradtraversy/webpack-starter
+
+https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/
+****
+https://stackoverflow.com/questions/37452402/webpack-loaders-vs-plugins-whats-the-difference
+
+npm init
+
+
+What is NPM?
+NPM – or "Node Package Manager" – is the default package manager for JavaScript's runtime Node.js.
+NPM consists of two main parts:
+
+a CLI (command-line interface) tool for publishing and downloading packages, and
+an online repository that hosts JavaScript packages
+
+
+Now, Node.js runtime is basically what will understand your javascript code and execute it to produce a result.
+
+Npm package manager is a tool which will allow you to install third party libraries (other people's code) by using the command line.
+
+npm install express
+will install the framework called express for example.
+
+Node JS
+
+Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications.
+
+Real-Time services (Chat, Games etc)
+
+NPM
+
+Npm is a package manager. Typically this software is installed to build Node applications.
+
+It let's you install software (libraries, plugins, frameworks and applications).
+Node.js or Node is an open-source, cross-platform, JavaScript runtime environment(JSRE) that executes JavaScript code outside of a web browser.
+
+npm is a package manager(like Nuget package manager in .NET -Microsoft ) for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js.
+
+You can differentiate them by finding their version using below code.
+
+node --version
+
+npm --version
+
+1
+
+
+node is a framework that can run JavaScript code on your machine while npm is a package manager. Using npm we can install and remove javascript packages also known as node modules. Now, it is not a rule that you should use npm to install and remove node modules. We can use yarn also. npm and yarn are capable of the following:
+
+Read and understand package.json file
+Download and put javascript modules in node_modules folder.
+Run scripts mentioned in package.json such as starting a node server, running in dev and production mode, running scripts for unit testing etc.
+
+0
+
+
+npm by default run node server.js; if you didn't specify scripts in the package.json
+
+"scripts": {
+    "start": "node your-script.js"
+}
+
+Node or NodeJS is runtime environment for executing javascript code outside of browser
+Jaavscript code -->JS engine -- > Machien Code
+each browser has its own engine chomre v8
+Node(exe) is wrapped inside c++ program with v8 engine + some additional modeuls
+node is not a programming lanuguafge,just runtime env for executing jaavscript engine
+higly scanble nonblokcing sync 
+node apps asnchrnous by default
+node only have single thread that handles all requests
+node uses event queue where once respose ready placed in queue and thread lsitens for its ,data itne and reatime
+node is idle for io ops intensive(more network requests)
+node should not be used for cpu intensive apps (image processing video enoding)
+
+node --version
+current version is experimental
+
+nodejs is jaavscript tuntime built on chromes v8 jaavscript engine nodejs uses event driven non blocking model that makes it light weight and efficient 
+nodejs package ecosystem npm is the largest ecosystem of open source libraries in the world
+
+installing isntalls both Node.js v8.9 and npm v5.5
+
+node,npm
+
+node is a c++ prgarams having v8 engoine
+>node app.js
+Hello World
+
+node does not have window object,document object
+node we have other libs to interact with files,os etc
+
+
+Node Core
+node module ystem
+OD,FIFLE SYTEM,EVENTS,HTTP
+CONSOLE GLOBAL OBJECT IN Node
+
+window.console ==consoel(inajavscript)
+belong t owindow object
+
+var message=''
+window.message
+
+
+in Node it is
+undr global
+global.console == console
+
+console.log(global.message) //undefined in ode js duw module system
+
+every var defined inside file sceop to that fiel(are private to taht module)
+
+console.log(module)
+module.exports.log=log
+
+require aviaalble only in node
+./ current folder
+
+node assume javascript file and dd js autoamtically during require
+.. for parent thsoe ar relative paths
+
+var logger=require('./logger')
+logger.log
+ccintally //by msitake
+jshint app.js
+gives erros in jaavscript fiels
+
+
+module.exports=log
+
+this time it jsu export log function
+
+
+const logger=require('./logger')
+
+logger('test')
+
+
+node runtime wraps your module with function
+(function(exports ...){
+
+Nodejs docs has list of module 
+
+ES 6 ECMA SCRIPT IS SPEC THAT DEFIENS NEW FEATURES TO TIPLEMENT BY BROWSERS
+BACKTICK //TEMPALTE STRING
+`${X}
+
+emitter.emit is sybchrounousl //illeb lsitened by all lsitenrs`
+
+express is built on top of http moduels in nodes
+
+
+
+NPm`
+
+
+STANDS FOR NODE PACKAGE MANAGE
+RESPONSIBLE FOR MANAGING ALL PAKCAGES AND MODULES FOR NODEJS APP
+COMMANDLINE UTILITY TO ISNTALL NODEJS MODULES,VERSION MANAGEMENT,DEPENDENCY MANAGEMENT OF NODE PACKAEGES
+
+npm part of nodejs intalltion
+	
+	npm init creates package,json
+	npm dep version * installs altest
+	
+	https://utahedu.devcamp.com/dissecting-react-js/guide/difference-between-package-and-package-lock-files-react-app
+	
+	But the question is why package.lock.json is necessary when you have package.json in your project application. package.lock.json is created for locking the dependency with the installed version. It will install the exact latest version of that package in your application and save it in package.json. Let’s say if the current version of the package is 1.3.2 then it will save the version with (^) sign. Here carot(^) means, it will support any higher version with major version 1 for eg. 1.2.2. 
+
+Without package.lock.json, there might be some differences in installed versions in different environments. To overcome this problem, package.lock.json is created to have the same results in every environment. It should be in source control with the package.json file because if any other user will clone the project and install dependencies then it will install the exact same dependencies as in package.lock.json to avoid differences.
+
+Below are the main differences between the two,
+
+https://medium.com/@chungadipraful/package-json-vs-package-lock-json-4a9d16c2283
+
+Package.json: package.json is used to install many different open source and also is used to install other available packages in a Node.js project. package.json file is also called as node configuration file, package.json file has two part i.e. ‘dependencies’ and ‘devDependencies’ . dependencies are mandatory for running the application while devdependencies is necessary to develop the angular application. Node Packager Manager has given package.json to load all JavaScript framework references in one attempt. npm uses the package.json file to specify the version of a package that our app depends on.
+
+
+Major version: -when software performance is not working. we will change in major version . Any increment in that is an sign to there are breaking changes in the software functionality.
+
+Minor version: -Minor version is incremented when we add new features in software . when we increment in that version , Only add new characteristic but the earlier code still working.
+
+Revision: -when Revision version is incremented So there are no add latest functionalities , no breaking changes .we are just fixes bugs in software and compatible with past code.
+https://thewebfor5.com/p/javascript/package-vs-package-lock-json/
+
+This is a file usually found in packages. It contains meta-information about the package like versioning information, what the package is about, dependencies of the package, how to set up the package and so much more.
+
+
+A higher major version of a package with 1.3.5 can be 1.4.7, 1.9.3 but cannot be 2.0.0 or more.
+
+Good: you always get to use the latest versions of packages.
+Bad: you always get to use the latest versions of packages.
+??
+
+Ok, the bad side is that latest versions may contain bugs or may contain incompatible codes for your codebase. npm released the package-lock.json file to solve this issue.
+
+You'll find this file a bit similar to package.json - holding some information about your file, but there's more to it. Remember the caret symbol in package.json dependencies? You could manually remove that symbol when you install a dependency, but that would be stressful.
+
+With package-lock.json, the versions of all dependencies your package would need are locked (-lock). Thttps://www.youtube.com/watch?v=IZGNcSuwBZshis means when you run npm install on another system, npm checks this file to install the exact versions of the dependencies. If this file is absent, npm would then work with the caret symbol.
+
+This means that you should also commit package-lock.json to your source control.
+
+
+Why is this file longer?
+It doesn't only lock the version of the packages in the package.json. It locks all versions of the dependencies and sub dependencies (and sub, sub, sub) that your package would need. While package-json shows you express, package-lock.json would show you a dependency of express.
+
+https://www.youtube.com/watch?v=IZGNcSuwBZs webpack
+
+
+
+
+npm i -y
+npm i -D webpack webpack-cli
+
+can have multiple entry points
+
+
+html webpack plugin creates index.html and inject entyrpints scripts
+under ditst
+
+need t ouse template to avoid overriding
+use cache 
+[name][contextnHash].js
+open : true opesn browser
+
+output clean: true deletes old fiels
+
+**
+webpack dev server runs from memory not from dist
+
+source map is generated sperately with helpe option .that can eb sued fro debugging as it will show exact line in source code for debugging
+
+babel loader for backenword browser compatiblitky
+resource laoder coms with webpack
+
+bundle analyze loader gives page t oshow bundle details liek size etc
+
+
+
+
