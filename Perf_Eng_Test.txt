@@ -1,0 +1,79 @@
+https://q-automations.com/client-side-performance/
+Page Load Time
+This metric indicates when the page was completely loaded and started to be interactive. It is fired when a resource and its dependent resources have finished loading.
+
+Page Weight
+This metric, also called “total requests.” is an accrual of all a site’s resource weights, measured in kilobytes or megabytes, including the HTML of the page itself. It’s useful for setting weight budgets on a site, which are easy to pass to developers and designers. It doesn’t always tell the whole story of performance, as performance often depends on how a page loads those requests.
+
+Speed Index
+Speed index is a score for the visual completeness of the page above the fold (what’s visible to the user) over time. 
+It uses video capture to calculate this score. Created by WebPagetest, it’s a score from 0 to infinity that maps approximately to milliseconds
+ of time before the page is completely visible to the user. A lower score is better.
+ 
+
+Ref: https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index
+
+Time to First Byte
+Time to first byte (TTFB) is a measurement used as an indication of th
+e responsiveness of a web server or other network resource. TTFB measures the duration from the user or client making an HTTP request to the first byte of the page being received by the client’s browser.
+
+Ref: https://www.maxcdn.com/one/visual-glossary/time-to-first-byte/
+
+First Paint
+This is the point at which pixels are first drawn on the scene. This metric excludes the default background paint, but does include any user-defined background paint.
+
+First Contentful Paint
+First Contentful Paint is triggered when any content (an object defined in the Document Object Model) is painted. This could be text, an image or canvas render.
+
+First Meaningful Paint
+First meaningful paint is a browser-supplied metric that measures how long it takes for the most meaningful content to be fully rendered on the site. It is equivalent to first-contentful-paint, and describes the duration until the browser first rendered any text, image (including background images), non-white canvas or SVG. This includes text with pending web fonts. This is the first moment when users could start consuming page content.
+
+Ref: https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint
+
+First Contentful Paint
+First Contentful Paint is triggered when any content (an object defined in the Document Object Model) is painted. This could be text, an image or canvas render.
+
+:::::::::::::::
+
+
+
+First Meaningful Paint
+First meaningful paint is a browser-supplied metric that measures how long it takes for the most meaningful content to be fully rendered on the site. It is equivalent to first-contentful-paint, and describes the duration until the browser first rendered any text, image (including background images), non-white canvas or SVG. This includes text with pending web fonts. This is the first moment when users could start consuming page content.
+
+Time to Interactive
+The number of seconds from the time the navigation started until the layout is stabilized, web fonts are visible, and the page is responsive to user input. The page is stabilized if there was no task blocking for at least 50ms.
+
+Ref: https://docs.google.com/document/d/1GGiI9-7KeY3TPqS3YT271upUVimo-XiL5mwWorDUD4c/edit#
+
+DOM Content Loaded
+The DOMContentLoaded event is fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. A very different event load should be used only to detect a fully-loaded page. It is a popular mistake to use load time as a performance metric, where DOMContentLoaded would be much more appropriate.
+
+Ref: https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded
+
+Total Blocking Time
+
+
+Client Side Performance Tools
+
+YSlow        OS
+Lighthouse   OS
+WebPageTest  NOS
+PageSpeed    
+Speed Curve
+
+https://techbeacon.com/app-dev-testing/web-performance-testing-18-free-open-source-tools-consider
+
+
+Under 100 milliseconds is perceived as instantaneous.
+A 100ms to 300ms delay is perceptible.
+One second is about the limit for the user's flow of thought to stay uninterrupted.
+Users expect a site to load in 2 seconds.
+After 3 seconds, 40% of visitors will abandon your site.
+10 seconds is around the limit for keeping the user's attention. 
+
+Two of the best tools to use to understand client-side performance are:
+
+Google PageSpeed Insights, a service that analyzes the content of a web page and generates suggestions to make your pages load faster. Reducing page load times reduces bounce rates and increases conversion rates.
+Google Lighthouse is an open-source, automated tool for improving the quality of web pages. Your front-end developer should at a minimum be using Lighthouse metrics, which are available in Google Chrome tools.
+
+
